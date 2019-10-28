@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,131 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MTGBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" colorLabel="IBBuiltInLabel-Red">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="amN-Nv-5dZ" userLabel="OpponentArea">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="447"/>
+                                <color key="backgroundColor" red="0.55321978140335637" green="0.9662682704357286" blue="0.65564309921945585" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzk-VC-irj" userLabel="OpponentLifeCount">
+                                <rect key="frame" x="139" y="164" width="136" height="119"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exR-93-MsE" userLabel="OpponentIncrement">
+                                <rect key="frame" x="341.5" y="198" width="52" height="51"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus.circle.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="heavy">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="OpponentLifeIncrementPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0gQ-7D-x8z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeB-AG-mSw" userLabel="OpponentDecrement">
+                                <rect key="frame" x="20" y="198" width="52" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="3wB-VI-6cw"/>
+                                    <constraint firstAttribute="width" constant="52" id="IY0-VB-VtT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="minus.circle.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="heavy">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="OpponentLifeDecrementPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUu-iI-vhK"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q9W-Xk-ZfB" userLabel="YouArea">
+                                <rect key="frame" x="0.0" y="445" width="414" height="451"/>
+                                <color key="backgroundColor" red="0.495663292464813" green="0.8632615930701355" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-Cl-Mq0" userLabel="YouDecrement">
+                                <rect key="frame" x="20" y="645" width="52" height="51"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="minus.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="heavy">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="YouLifeDecrement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wn5-ia-Acy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-Ds-6mZ" userLabel="YourIncrement">
+                                <rect key="frame" x="341.5" y="645" width="52" height="51"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="heavy">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="YourLifeIncrement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSB-zf-EjD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiW-fP-WeQ" userLabel="YourLifeCount">
+                                <rect key="frame" x="148.5" y="611" width="117.5" height="119"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QBN-Cl-Mq0" firstAttribute="baseline" secondItem="5Wr-Ds-6mZ" secondAttribute="baseline" id="2D7-bU-q6o"/>
+                            <constraint firstItem="Zzk-VC-irj" firstAttribute="centerY" secondItem="exR-93-MsE" secondAttribute="centerY" id="2KW-3c-hJr"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="q9W-Xk-ZfB" secondAttribute="bottom" constant="-34" id="4QG-IF-VIh"/>
+                            <constraint firstItem="Zzk-VC-irj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="8G1-dw-pBW"/>
+                            <constraint firstItem="XeB-AG-mSw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="8uV-1w-PoH"/>
+                            <constraint firstItem="XeB-AG-mSw" firstAttribute="baseline" secondItem="exR-93-MsE" secondAttribute="firstBaseline" id="EWg-k0-KzL"/>
+                            <constraint firstItem="amN-Nv-5dZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="KE0-Y2-cWH"/>
+                            <constraint firstItem="exR-93-MsE" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Zzk-VC-irj" secondAttribute="trailing" constant="66.5" id="Qeo-wO-rVB"/>
+                            <constraint firstItem="q9W-Xk-ZfB" firstAttribute="centerY" secondItem="5Wr-Ds-6mZ" secondAttribute="centerY" id="Rl4-nx-k3Y"/>
+                            <constraint firstItem="amN-Nv-5dZ" firstAttribute="trailing" secondItem="q9W-Xk-ZfB" secondAttribute="trailing" id="SPg-ca-Rtx"/>
+                            <constraint firstItem="exR-93-MsE" firstAttribute="baseline" secondItem="XeB-AG-mSw" secondAttribute="firstBaseline" id="TI4-qj-P0M"/>
+                            <constraint firstItem="q9W-Xk-ZfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ub5-vf-bfZ"/>
+                            <constraint firstItem="5Wr-Ds-6mZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="kiW-fP-WeQ" secondAttribute="trailing" constant="75.5" id="YOn-xY-nN8"/>
+                            <constraint firstItem="amN-Nv-5dZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aF9-Vz-Mhr"/>
+                            <constraint firstItem="Zzk-VC-irj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="XeB-AG-mSw" secondAttribute="trailing" constant="67" id="buB-uC-u8V"/>
+                            <constraint firstItem="amN-Nv-5dZ" firstAttribute="leading" secondItem="q9W-Xk-ZfB" secondAttribute="leading" id="cOh-FJ-bac"/>
+                            <constraint firstItem="XeB-AG-mSw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fJ6-Ze-q6M"/>
+                            <constraint firstItem="amN-Nv-5dZ" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="Zzk-VC-irj" secondAttribute="centerX" id="ffG-iF-Jt3"/>
+                            <constraint firstItem="amN-Nv-5dZ" firstAttribute="centerY" secondItem="exR-93-MsE" secondAttribute="centerY" id="giP-al-DLu"/>
+                            <constraint firstItem="XeB-AG-mSw" firstAttribute="leading" secondItem="QBN-Cl-Mq0" secondAttribute="leading" id="m1a-hm-m4h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kiW-fP-WeQ" secondAttribute="bottom" constant="132" id="n0o-Ox-GIm"/>
+                            <constraint firstItem="q9W-Xk-ZfB" firstAttribute="centerX" relation="lessThanOrEqual" secondItem="kiW-fP-WeQ" secondAttribute="centerX" id="tea-FA-jpW"/>
+                            <constraint firstItem="exR-93-MsE" firstAttribute="leading" secondItem="5Wr-Ds-6mZ" secondAttribute="leading" id="vl3-4m-QS9"/>
+                            <constraint firstItem="kiW-fP-WeQ" firstAttribute="centerY" secondItem="5Wr-Ds-6mZ" secondAttribute="centerY" id="zfN-c4-Jjx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="OpponentLifeCount" destination="Zzk-VC-irj" id="mdz-ee-mpD"/>
+                        <outlet property="OpponentLifeDecrement" destination="XeB-AG-mSw" id="L16-Yz-grc"/>
+                        <outlet property="OpponentLifeIncrement" destination="exR-93-MsE" id="VFb-gk-EOW"/>
+                        <outlet property="YourLifeCount" destination="kiW-fP-WeQ" id="weE-I4-gGf"/>
+                        <outlet property="YourLifeDecrement" destination="QBN-Cl-Mq0" id="eVK-r5-GSF"/>
+                        <outlet property="YourLifeIncrement" destination="5Wr-Ds-6mZ" id="8Wg-oI-08P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>

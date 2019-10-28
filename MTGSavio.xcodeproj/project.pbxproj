@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D27C900D23671CB80019D8E0 /* MTGBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTGBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27C900D23671CB80019D8E0 /* MTGSavior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTGSavior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27C901023671CB80019D8E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D27C901223671CB80019D8E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D27C901423671CB80019D8E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		D27C901923671CB90019D8E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D27C901C23671CB90019D8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D27C901E23671CB90019D8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D27C902323671CB90019D8E0 /* MTGBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTGBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27C902323671CB90019D8E0 /* MTGSaviorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTGSaviorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27C902723671CB90019D8E0 /* MTGBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGBuddyTests.swift; sourceTree = "<group>"; };
 		D27C902923671CB90019D8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +70,8 @@
 		D27C900E23671CB80019D8E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D27C900D23671CB80019D8E0 /* MTGBuddy.app */,
-				D27C902323671CB90019D8E0 /* MTGBuddyTests.xctest */,
+				D27C900D23671CB80019D8E0 /* MTGSavior.app */,
+				D27C902323671CB90019D8E0 /* MTGSaviorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D27C900C23671CB80019D8E0 /* MTGBuddy */ = {
+		D27C900C23671CB80019D8E0 /* MTGSavior */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D27C902C23671CB90019D8E0 /* Build configuration list for PBXNativeTarget "MTGBuddy" */;
+			buildConfigurationList = D27C902C23671CB90019D8E0 /* Build configuration list for PBXNativeTarget "MTGSavior" */;
 			buildPhases = (
 				D27C900923671CB80019D8E0 /* Sources */,
 				D27C900A23671CB80019D8E0 /* Frameworks */,
@@ -114,14 +114,14 @@
 			);
 			dependencies = (
 			);
-			name = MTGBuddy;
+			name = MTGSavior;
 			productName = MTGBuddy;
-			productReference = D27C900D23671CB80019D8E0 /* MTGBuddy.app */;
+			productReference = D27C900D23671CB80019D8E0 /* MTGSavior.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D27C902223671CB90019D8E0 /* MTGBuddyTests */ = {
+		D27C902223671CB90019D8E0 /* MTGSaviorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D27C902F23671CB90019D8E0 /* Build configuration list for PBXNativeTarget "MTGBuddyTests" */;
+			buildConfigurationList = D27C902F23671CB90019D8E0 /* Build configuration list for PBXNativeTarget "MTGSaviorTests" */;
 			buildPhases = (
 				D27C901F23671CB90019D8E0 /* Sources */,
 				D27C902023671CB90019D8E0 /* Frameworks */,
@@ -132,9 +132,9 @@
 			dependencies = (
 				D27C902523671CB90019D8E0 /* PBXTargetDependency */,
 			);
-			name = MTGBuddyTests;
+			name = MTGSaviorTests;
 			productName = MTGBuddyTests;
-			productReference = D27C902323671CB90019D8E0 /* MTGBuddyTests.xctest */;
+			productReference = D27C902323671CB90019D8E0 /* MTGSaviorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +156,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D27C900823671CB80019D8E0 /* Build configuration list for PBXProject "MTGBuddy" */;
+			buildConfigurationList = D27C900823671CB80019D8E0 /* Build configuration list for PBXProject "MTGSavio" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -169,8 +169,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D27C900C23671CB80019D8E0 /* MTGBuddy */,
-				D27C902223671CB90019D8E0 /* MTGBuddyTests */,
+				D27C900C23671CB80019D8E0 /* MTGSavior */,
+				D27C902223671CB90019D8E0 /* MTGSaviorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,7 +219,7 @@
 /* Begin PBXTargetDependency section */
 		D27C902523671CB90019D8E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D27C900C23671CB80019D8E0 /* MTGBuddy */;
+			target = D27C900C23671CB80019D8E0 /* MTGSavior */;
 			targetProxy = D27C902423671CB90019D8E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -412,7 +412,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTGBuddy.app/MTGBuddy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTGSavior.app/MTGSavior";
 			};
 			name = Debug;
 		};
@@ -434,14 +434,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTGBuddy.app/MTGBuddy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTGSavior.app/MTGSavior";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D27C900823671CB80019D8E0 /* Build configuration list for PBXProject "MTGBuddy" */ = {
+		D27C900823671CB80019D8E0 /* Build configuration list for PBXProject "MTGSavio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D27C902A23671CB90019D8E0 /* Debug */,
@@ -450,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D27C902C23671CB90019D8E0 /* Build configuration list for PBXNativeTarget "MTGBuddy" */ = {
+		D27C902C23671CB90019D8E0 /* Build configuration list for PBXNativeTarget "MTGSavior" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D27C902D23671CB90019D8E0 /* Debug */,
@@ -459,7 +459,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D27C902F23671CB90019D8E0 /* Build configuration list for PBXNativeTarget "MTGBuddyTests" */ = {
+		D27C902F23671CB90019D8E0 /* Build configuration list for PBXNativeTarget "MTGSaviorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D27C903023671CB90019D8E0 /* Debug */,
