@@ -1,15 +1,15 @@
 //
-//  MTGBuddyTests.swift
-//  MTGBuddyTests
+//  MTGSaviorTests.swift
+//  MTGSaviorTests
 //
 //  Created by Atharva Shirke on 10/28/19.
 //  Copyright © 2019 Atharva Shirke. All rights reserved.
 //
 
 import XCTest
-@testable import MTGBuddy
+@testable import MTGSavior
 
-class MTGBuddyTests: XCTestCase {
+class MTGSaviorTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
